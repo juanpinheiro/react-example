@@ -4,7 +4,8 @@ import middleware from './middleware';
 
 const configureStore = () => {
 	return createStore(
-		reducers
+    reducers,
+    middleware
 	);
 };
 

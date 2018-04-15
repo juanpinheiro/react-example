@@ -1,0 +1,6 @@
+:local(.component) {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; }
+  :local(.component) .field {
+    min-width: 250px; }
