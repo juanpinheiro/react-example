@@ -10,25 +10,23 @@ const { Header, Content, Footer } = Layout;
 
 const Dashboard = () => (
   <Layout className={style.component}>
-    <Spin spinning={false}>
-      <Header className="header">
-        <h1>
-          <img src={logo} alt="Listagem de cidades Logo" />
-          <span>Score de Cidades</span>
-        </h1>
-      </Header>
-        <Content className="content">
-          <Row type="flex" justify="center">
-            <Col span={12}>
-              <Search />
-              <Cities />
-            </Col>
-          </Row>
-        </Content>
-      <Footer className="footer">
-        <span>Juan Pinheiro &copy; 2018</span>
-      </Footer>
-    </Spin>
+    <Header className="header">
+      <h1>
+        <img src={logo} alt="Listagem de cidades Logo" />
+        <span>Score de Cidades</span>
+      </h1>
+    </Header>
+      <Content className="content">
+        <Row type="flex" justify="center">
+          <Col span={12}>
+            <Search />
+            <Cities />
+          </Col>
+        </Row>
+      </Content>
+    <Footer className="footer">
+      <span>Juan Pinheiro &copy; 2018</span>
+    </Footer>
   </Layout>
 );
 
