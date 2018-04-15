@@ -31,7 +31,6 @@ class Cities extends Component {
             key="Nome"
           />
           <Column
-            title="Action"
             key="action"
             align="right"
             render={(text, record) => (
