@@ -57,8 +57,8 @@ class Search extends Component {
               option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             )}
           >
-            {this.props.states.map((value) => (
-              <Option value={value}>{value}</Option>
+            {this.props.states.map((value, index) => (
+              <Option key={index} value={value}>{value}</Option>
             ))}
           </Select>
           </FormItem>
