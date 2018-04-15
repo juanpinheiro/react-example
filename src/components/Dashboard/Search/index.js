@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { searchCities } from '../../../actions/index';
+import { searchCities, getCitiesStates } from '../../../actions/index';
 
 import { Form, Input, Button, Select } from 'antd';
 
@@ -17,6 +17,10 @@ class Search extends Component {
       city: '',
       state: '',
     };
+  }
+
+  componentDidMount() {
+    this.props.dispatch(getCitiesStates());
   }
 
   handleSubmit = (e) => {
@@ -53,8 +57,9 @@ class Search extends Component {
               option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             )}
           >
-            <Option value="Bahia">Bahia</Option>
-            <Option value="São Paulo">São Paulo</Option>
+            {this.props.states.map((value) => (
+              <Option value={value}>{value}</Option>
+            ))}
           </Select>
           </FormItem>
           <FormItem>
@@ -68,4 +73,11 @@ class Search extends Component {
   }
 }
 
-export default connect()(Search);
+const mapStateToProps = state => {
+  return {
+      states: state.states
+  };
+};
+
+
+export default connect(mapStateToProps)(Search);

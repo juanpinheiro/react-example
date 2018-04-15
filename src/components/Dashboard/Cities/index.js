@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 import { getCities } from '../../../actions/index';
 import { connect } from 'react-redux';
+import { Table } from 'antd';
+
+const columns = [{
+  title: 'Estado',
+  dataIndex: 'Estado',
+  key: 'Estado',
+}, {
+  title: 'Cidade',
+  dataIndex: 'Nome',
+  key: 'Nome',
+}, {
+  key: 'Score',
+}];
 
 class Cities extends Component {
 
@@ -11,11 +24,11 @@ class Cities extends Component {
   render() {
     return (
       <div>
-        {this.props.cities.map((item, index) => {
-          return (
-            <span key={index}>{item.Nome}</span>
-          );
-        })}
+        <Table
+          columns={columns}
+          dataSource={this.props.cities}
+          rowKey={(record, index) => index}
+          locale={{ emptyText: 'Nenhum dado encontrado' }} />
       </div>
     );
   }
