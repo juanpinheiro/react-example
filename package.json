@@ -11,10 +11,14 @@
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "dependencies": {
+    "antd": "^3.4.1",
     "axios": "^0.18.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "react-scripts": "1.1.4"
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^3.7.2",
+    "redux-form": "^7.3.0"
   },
   "devDependencies": {
     "node-sass-chokidar": "^1.2.2",
