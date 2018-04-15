@@ -1,3 +1,4 @@
 import { applyMiddleware } from 'redux';
+import cities from './cities';
 
-export default applyMiddleware();
+export default applyMiddleware(cities);

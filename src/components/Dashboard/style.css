@@ -1,3 +1,18 @@
+:local(.component) .header {
+  text-align: center; }
+
+:local(.component) .content {
+  background-color: #fff;
+  min-height: 88vh; }
+
+:local(.component) .footer {
+  text-align: center; }
+
 :local(.component) h1 {
   color: #eee;
   font-weight: 300; }
+
+:local(.component) img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 5px; }
