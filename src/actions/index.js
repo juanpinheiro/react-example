@@ -16,3 +16,7 @@ export const searchCities = filter => ({
   type: 'SEARCH_CITIES',
   filter,
 });
+
+export const getCitiesStates = () => ({
+  type: 'GET_STATES',
+});
