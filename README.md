@@ -24,7 +24,12 @@ $ yarn analyze
 
 ## Unit Test
 ```sh
-$ yarn analyze
+$ yarn test
+```
+
+## Docker
+```sh
+$ docker-compose up
 ```
 
 ## Starting Server
